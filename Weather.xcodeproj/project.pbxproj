@@ -13,6 +13,9 @@
 		AC35FB0A28AA28E9007295FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC35FB0928AA28E9007295FD /* Assets.xcassets */; };
 		AC35FB0D28AA28E9007295FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC35FB0B28AA28E9007295FD /* LaunchScreen.storyboard */; };
 		AC35FB1528AA2A6E007295FD /* ListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35FB1428AA2A6E007295FD /* ListTVC.swift */; };
+		AC35FB3C28AA5500007295FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35FB3B28AA5500007295FD /* Constants.swift */; };
+		AC35FB3F28AA55E6007295FD /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35FB3E28AA55E6007295FD /* NetworkWeatherManager.swift */; };
+		AC35FB4128AA59A6007295FD /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35FB4028AA59A6007295FD /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AC35FB0C28AA28E9007295FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC35FB0E28AA28E9007295FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC35FB1428AA2A6E007295FD /* ListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTVC.swift; sourceTree = "<group>"; };
+		AC35FB3B28AA5500007295FD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC35FB3E28AA55E6007295FD /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
+		AC35FB4028AA59A6007295FD /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		AC35FB3828AA53D0007295FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC35FB3E28AA55E6007295FD /* NetworkWeatherManager.swift */,
+				AC35FB4028AA59A6007295FD /* WeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 				AC35FB0228AA28E5007295FD /* SceneDelegate.swift */,
 				AC35FB0928AA28E9007295FD /* Assets.xcassets */,
 				AC35FB0E28AA28E9007295FD /* Info.plist */,
+				AC35FB3B28AA5500007295FD /* Constants.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -164,7 +173,10 @@
 			files = (
 				AC35FB1528AA2A6E007295FD /* ListTVC.swift in Sources */,
 				AC35FB0128AA28E5007295FD /* AppDelegate.swift in Sources */,
+				AC35FB3F28AA55E6007295FD /* NetworkWeatherManager.swift in Sources */,
 				AC35FB0328AA28E5007295FD /* SceneDelegate.swift in Sources */,
+				AC35FB4128AA59A6007295FD /* WeatherData.swift in Sources */,
+				AC35FB3C28AA5500007295FD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +341,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,7 +370,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
