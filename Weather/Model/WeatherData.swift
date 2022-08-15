@@ -11,12 +11,11 @@ import Foundation
 struct WeatherData: Decodable {
     let info: Info
     let fact: Fact
-    let forecast: [Forecast]
+    let forecasts: [Forecast]
 }
 
 struct Info: Decodable {
     let url: String
-    let fact: Fact
 }
 
 struct Fact: Decodable {
@@ -32,7 +31,6 @@ struct Fact: Decodable {
         case condition
         case windSpeed = "wind_speed"
         case pressureMm = "pressure_mm"
-
     }
 }
 

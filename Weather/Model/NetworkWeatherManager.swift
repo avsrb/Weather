@@ -9,11 +9,12 @@ import Foundation
 
 struct NetworkWeatherManager {
     func fetchWeather() {
+//        kazan "https://api.weather.yandex.ru/v2/forecast?lat=55.796289&lon=49.108795"
         
-        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=55.75396&lon=37.620393"
-        guard let url = URL(string: urlString) else { print(#function); return }
+        let urlString = "https://api.weather.yandex.ru/v2/forecast?lat=55.796289&lon=49.108795"
+        guard let url = URL(string: urlString) else { return }
         
-        var request = URLRequest(url: url, timeoutInterval: .infinity)
+        var request = URLRequest(url: url, timeoutInterval: Double.infinity)
         request.addValue("\(apiKey)", forHTTPHeaderField: "X-Yandex-API-Key")
         request.httpMethod = "GET"
         
@@ -22,10 +23,14 @@ struct NetworkWeatherManager {
                 print(String(describing: error))
                 return
             }
-            print(String(data: data, encoding: .utf8)!)
+//            print(String(data: data, encoding: .utf8)!)
+            if let weather = self.pasreJSON(withData: data) {
+//                 completionHendler(weather)
+                print(weather)
+            }
         }
         tast.resume()
-        
+
     }
     
     func pasreJSON(withData data: Data) -> Weather? {
